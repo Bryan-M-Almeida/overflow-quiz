@@ -57,6 +57,14 @@ export default function Presentation() {
     if (window.location.hash !== hash) history.replaceState(null, '', hash)
   }, [index])
 
+  // Follow manual hash edits (e.g. typing #4 in the address bar).
+  useEffect(() => {
+    if (!slideMode) return
+    const onHash = () => go(indexFromHash())
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [slideMode, go])
+
   // Keyboard controls
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
