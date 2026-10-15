@@ -396,15 +396,15 @@ export function Conclusions({ active }: SlideProps) {
 /* 11 · ¿Preguntas? */
 export function Questions({ active }: SlideProps) {
   return (
-    <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 md:flex-row md:justify-between md:gap-12">
-      <div className="flex flex-col gap-5 text-center md:text-left">
+    <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-8 lg:flex-row lg:justify-between lg:gap-12">
+      <div className="flex flex-col gap-5 text-center lg:text-left">
         <Reveal active={active} as="h2" className="t-display">
           ¿Preguntas?
         </Reveal>
         <Reveal active={active} delay={150} as="p" className="t-big text-root">
           Escanea y juega
         </Reveal>
-        <Reveal active={active} delay={250} className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted md:justify-start">
+        <Reveal active={active} delay={250} className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted lg:justify-start">
           <a href={QUIZ_URL} className="t-num underline-offset-4 hover:text-ink hover:underline">
             {QUIZ_URL.replace(/^https?:\/\//, '')}
           </a>
@@ -414,7 +414,7 @@ export function Questions({ active }: SlideProps) {
           </Link>
         </Reveal>
       </div>
-      <Reveal active={active} delay={200} className="w-[min(78vw,22rem)] shrink-0 md:w-[min(40vw,58vh)]">
+      <Reveal active={active} delay={200} className="w-[min(78vw,22rem)] shrink-0 lg:w-[min(40vw,58vh)]">
         <QrCode className={active ? 'animate-pop' : ''} />
       </Reveal>
     </div>
