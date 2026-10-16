@@ -54,6 +54,8 @@ If it is not set, the app falls back to the current origin (handy in development
 
 The variable is read at **build time**, so rebuild or redeploy after changing it.
 
+The production URL (`https://la-tecnica-de-overflow.vercel.app`) is committed in `.env.production`. A `VITE_SITE_URL` set in Vercel's Environment Variables takes precedence over it.
+
 ## Deploy to Vercel
 
 1. Push this repository to GitHub, GitLab or Bitbucket.
